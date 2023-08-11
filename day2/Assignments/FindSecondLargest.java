@@ -1,41 +1,42 @@
-package group1.week1.day2.Assignments;
+package group1.week3.day2.Assignments;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
-public class FindSecondLargest
+public class FindSecondLargest {
 
-
-{
-
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	
 	{
+		int[] data = {3,2,11,4,6,7,2,3,3,6,7};
+
+		
+		Set<Integer> emptySet = new TreeSet<Integer>();
 		
 		
-        int nums[] = {2,3,4,5,7,7,5,9,8,8,3};
+		for (int i = 0; i < data.length; i++) 
 		
-		int length =nums.length;
-		
-		
-		
-		Arrays.sort(nums);	
-		
-		
-		System.out.print("The number of elements in an array are : ");
-		
-		for( int i=0; i<length-1;i++)
-			
 		{
-			System.out.println(nums[i]);
 			
-			
+			emptySet.add(data[i]);
+				
 		}
-			
-			System.out.println("The Second largest element in given array is : "+nums[length-2]);
 		
+		List<Integer> ConvertsetToList = new ArrayList<Integer>(emptySet);
+		
+		System.out.println("From set to list converted is "+ emptySet);
+		
+        
+        
+        int  j=ConvertsetToList.get(4);
+        
+        System.out.println("The Second Largest Number is "+ j);
+        
+		
+//		
 		
 	}
 
-	}
-
-
+}
